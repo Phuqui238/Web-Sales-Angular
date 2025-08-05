@@ -1,0 +1,501 @@
+@for (product of products; track product.name) {}
+<div class="product-container">
+  @for (product of products; track product.name) {}
+  @for (product of products; track product.name) {
+    <div class="product-card">
+      <img [src]="product.image" alt="{{ product.name }}" />
+      <p class="brand">{{ product.brand }}</p>
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.price }}</p>
+      <button (click)="onAdd(product)">Thêm vào giỏ</button>
+    </div>
+  }
+</div>
+
+
+
+  <div class="filter-title-sort">
+  <h5 class="page-title">Nam</h5>
+  <div class="sort-box">
+    <label class="sort-label">Sắp xếp:</label>
+    <select class="sort-select">
+      <option value="">Từ A đến Z</option>
+      <option value="">Từ Z đến A</option>
+      <option value="">Giá tăng dần</option>
+      <option value="">Giá giảm dần</option>
+      <option value="">Hàng mới</option>
+    </select>
+  </div>
+</div>
+<div class="menu">
+  <div class="left-menu">
+    <div class="filter">
+      <div class="filter-group">
+        <p>THƯƠNG HIỆU</p>
+        <mat-checkbox>PAPKA Fashion</mat-checkbox>
+        <mat-checkbox>Công Ty TNHH Đầu Tư Và Thương Mại Minh Gia Phú</mat-checkbox>
+        <mat-checkbox>Khác</mat-checkbox>
+      </div>
+
+      <div class="filter-group">
+        <p>MỨC GIÁ</p>
+        <mat-checkbox>Giá dưới 100,000₫</mat-checkbox>
+        <mat-checkbox>100,000₫ - 200,000₫</mat-checkbox>
+        <mat-checkbox>200,000₫ - 300,000₫</mat-checkbox>
+        <mat-checkbox>300,000₫ - 500,000₫</mat-checkbox>
+        <mat-checkbox>500,000đ - 700,000₫</mat-checkbox>
+        <mat-checkbox>Giá trên 1,000,000₫</mat-checkbox>
+      </div>
+
+      <div class="filter-group">
+        <p>LOẠI</p>
+        <mat-checkbox>ÁO NAM</mat-checkbox> <br>
+        <mat-checkbox>Áo Polo Nam</mat-checkbox> <br>
+        <mat-checkbox>Áo Thun Nam</mat-checkbox> <br>
+        <mat-checkbox>QUẦN NAM</mat-checkbox> <br>
+        <mat-checkbox>Khác</mat-checkbox> <br>
+        <mat-checkbox>Quần shorts</mat-checkbox> <br>
+        <mat-checkbox>Quần Thun Nam</mat-checkbox> <br>
+        <mat-checkbox>SM_TD</mat-checkbox> <br>
+        <mat-checkbox>ÁO NỮ</mat-checkbox> <br>
+        <mat-checkbox>Áo sơ mi nam</mat-checkbox>
+      </div>
+    </div>
+
+  </div>
+  <div class="right-menu">
+    <div class="clothes">
+      <div class="image-wrapper">
+        <img class="product-image"
+             src="https://product.hstatic.net/1000235488/product/1079_be_7eb0884621924936925f52cc87c7f2f3_large.png"
+             alt="">
+
+        <div class="hover-box">
+          <button class="btn-action">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+          <button class="btn-action">
+            <span class="material-symbols-outlined">visibility</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="brand-name">CÔNG TY TNHH ĐẦU TƯ VÀ THƯƠNG MẠI MINH GIA PHÚ</p>
+        <h3 class="product-name">Áo Nam Papka 1079 be</h3>
+        <div class="price">249,000đ</div>
+        <div class="price-sub">
+          <span class="old-price">449,000đ</span>
+          <span class="discount">-45%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="clothes">
+      <div class="image-wrapper">
+        <img class="product-image"
+             src="https://product.hstatic.net/1000235488/product/1079_reu_5bfb30bc38f7410e8f897b29030d18be_large.png"
+             alt="">
+
+        <div class="hover-box">
+          <button class="btn-action">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+          <button class="btn-action">
+            <span class="material-symbols-outlined">visibility</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="brand-name">CÔNG TY TNHH ĐẦU TƯ VÀ THƯƠNG MẠI MINH GIA PHÚ</p>
+        <h3 class="product-name">Áo Nam Papka 1079 rêu</h3>
+        <div class="price">249,000đ</div>
+        <div class="price-sub">
+          <span class="old-price">449,000đ</span>
+          <span class="discount">-45%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="clothes">
+      <div class="image-wrapper">
+        <img class="product-image"
+             src="https://product.hstatic.net/1000235488/product/1079_xam_nhat_74051f1442c74151b24af7cb1e072515_large.png"
+             alt="">
+
+        <div class="hover-box">
+          <button class="btn-action">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+          <button class="btn-action">
+            <span class="material-symbols-outlined">visibility</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="brand-name">CÔNG TY TNHH ĐẦU TƯ VÀ THƯƠNG MẠI MINH GIA PHÚ</p>
+        <h3 class="product-name">Áo Nam Papka 1079 xám nhạt</h3>
+        <div class="price">249,000đ</div>
+        <div class="price-sub">
+          <span class="old-price">449,000đ</span>
+          <span class="discount">-45%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="clothes">
+      <div class="image-wrapper">
+        <img class="product-image"
+             src="https://product.hstatic.net/1000235488/product/1079_xanh_bien_6680ecb7b40b4bbda0a889fc8963cba8_large.png"
+             alt="">
+
+        <div class="hover-box">
+          <button class="btn-action">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+          <button class="btn-action">
+            <span class="material-symbols-outlined">visibility</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="brand-name">CÔNG TY TNHH ĐẦU TƯ VÀ THƯƠNG MẠI MINH GIA PHÚ</p>
+        <h3 class="product-name">Áo Nam Papka 1079 xanh biển</h3>
+        <div class="price">249,000đ</div>
+        <div class="price-sub">
+          <span class="old-price">449,000đ</span>
+          <span class="discount">-45%</span>
+        </div>
+      </div>
+    </div>
+    <div class="clothes">
+      <div class="image-wrapper">
+        <img class="product-image"
+             src="https://product.hstatic.net/1000235488/product/1079_xanh_bien_6680ecb7b40b4bbda0a889fc8963cba8_large.png"
+             alt="">
+
+        <div class="hover-box">
+          <button class="btn-action">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+          <button class="btn-action">
+            <span class="material-symbols-outlined">visibility</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="brand-name">CÔNG TY TNHH ĐẦU TƯ VÀ THƯƠNG MẠI MINH GIA PHÚ</p>
+        <h3 class="product-name">Áo Nam Papka 1079 xanh biển</h3>
+        <div class="price">249,000đ</div>
+        <div class="price-sub">
+          <span class="old-price">449,000đ</span>
+          <span class="discount">-45%</span>
+        </div>
+      </div>
+    </div>
+    <div class="clothes">
+      <div class="image-wrapper">
+        <img class="product-image"
+             src="https://product.hstatic.net/1000235488/product/1079_xanh_bien_6680ecb7b40b4bbda0a889fc8963cba8_large.png"
+             alt="">
+
+        <div class="hover-box">
+          <button class="btn-action">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+          <button class="btn-action">
+            <span class="material-symbols-outlined">visibility</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="brand-name">CÔNG TY TNHH ĐẦU TƯ VÀ THƯƠNG MẠI MINH GIA PHÚ</p>
+        <h3 class="product-name">Áo Nam Papka 1079 xanh biển</h3>
+        <div class="price">249,000đ</div>
+        <div class="price-sub">
+          <span class="old-price">449,000đ</span>
+          <span class="discount">-45%</span>
+        </div>
+      </div>
+    </div>
+    <div class="clothes">
+      <div class="image-wrapper">
+        <img class="product-image"
+             src="https://product.hstatic.net/1000235488/product/1079_xanh_bien_6680ecb7b40b4bbda0a889fc8963cba8_large.png"
+             alt="">
+
+        <div class="hover-box">
+          <button class="btn-action">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+          <button class="btn-action">
+            <span class="material-symbols-outlined">visibility</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="brand-name">CÔNG TY TNHH ĐẦU TƯ VÀ THƯƠNG MẠI MINH GIA PHÚ</p>
+        <h3 class="product-name">Áo Nam Papka 1079 xanh biển</h3>
+        <div class="price">249,000đ</div>
+        <div class="price-sub">
+          <span class="old-price">449,000đ</span>
+          <span class="discount">-45%</span>
+        </div>
+      </div>
+    </div>
+    <div class="clothes">
+      <div class="image-wrapper">
+        <img class="product-image"
+             src="https://product.hstatic.net/1000235488/product/1079_xanh_bien_6680ecb7b40b4bbda0a889fc8963cba8_large.png"
+             alt="">
+
+        <div class="hover-box">
+          <button class="btn-action">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+          <button class="btn-action">
+            <span class="material-symbols-outlined">visibility</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="brand-name">CÔNG TY TNHH ĐẦU TƯ VÀ THƯƠNG MẠI MINH GIA PHÚ</p>
+        <h3 class="product-name">Áo Nam Papka 1079 xanh biển</h3>
+        <div class="price">249,000đ</div>
+        <div class="price-sub">
+          <span class="old-price">449,000đ</span>
+          <span class="discount">-45%</span>
+        </div>
+      </div>
+    </div>
+    <div class="clothes">
+      <div class="image-wrapper">
+        <img class="product-image"
+             src="https://product.hstatic.net/1000235488/product/1079_xanh_bien_6680ecb7b40b4bbda0a889fc8963cba8_large.png"
+             alt="">
+
+        <div class="hover-box">
+          <button class="btn-action">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+          <button class="btn-action">
+            <span class="material-symbols-outlined">visibility</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="brand-name">CÔNG TY TNHH ĐẦU TƯ VÀ THƯƠNG MẠI MINH GIA PHÚ</p>
+        <h3 class="product-name">Áo Nam Papka 1079 xanh biển</h3>
+        <div class="price">249,000đ</div>
+        <div class="price-sub">
+          <span class="old-price">449,000đ</span>
+          <span class="discount">-45%</span>
+        </div>
+      </div>
+    </div>
+    <div class="clothes">
+      <div class="image-wrapper">
+        <img class="product-image"
+             src="https://product.hstatic.net/1000235488/product/1079_xanh_bien_6680ecb7b40b4bbda0a889fc8963cba8_large.png"
+             alt="">
+
+        <div class="hover-box">
+          <button class="btn-action">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+          <button class="btn-action">
+            <span class="material-symbols-outlined">visibility</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="brand-name">CÔNG TY TNHH ĐẦU TƯ VÀ THƯƠNG MẠI MINH GIA PHÚ</p>
+        <h3 class="product-name">Áo Nam Papka 1079 xanh biển</h3>
+        <div class="price">249,000đ</div>
+        <div class="price-sub">
+          <span class="old-price">449,000đ</span>
+          <span class="discount">-45%</span>
+        </div>
+      </div>
+    </div>
+    <div class="clothes">
+      <div class="image-wrapper">
+        <img class="product-image"
+             src="https://product.hstatic.net/1000235488/product/1079_xanh_bien_6680ecb7b40b4bbda0a889fc8963cba8_large.png"
+             alt="">
+
+        <div class="hover-box">
+          <button class="btn-action">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+          <button class="btn-action">
+            <span class="material-symbols-outlined">visibility</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="brand-name">CÔNG TY TNHH ĐẦU TƯ VÀ THƯƠNG MẠI MINH GIA PHÚ</p>
+        <h3 class="product-name">Áo Nam Papka 1079 xanh biển</h3>
+        <div class="price">249,000đ</div>
+        <div class="price-sub">
+          <span class="old-price">449,000đ</span>
+          <span class="discount">-45%</span>
+        </div>
+      </div>
+    </div>
+    <div class="clothes">
+      <div class="image-wrapper">
+        <img class="product-image"
+             src="https://product.hstatic.net/1000235488/product/1079_xanh_bien_6680ecb7b40b4bbda0a889fc8963cba8_large.png"
+             alt="">
+
+        <div class="hover-box">
+          <button class="btn-action">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+          <button class="btn-action">
+            <span class="material-symbols-outlined">visibility</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="brand-name">CÔNG TY TNHH ĐẦU TƯ VÀ THƯƠNG MẠI MINH GIA PHÚ</p>
+        <h3 class="product-name">Áo Nam Papka 1079 xanh biển</h3>
+        <div class="price">249,000đ</div>
+        <div class="price-sub">
+          <span class="old-price">449,000đ</span>
+          <span class="discount">-45%</span>
+        </div>
+      </div>
+    </div>
+    <div class="clothes">
+      <div class="image-wrapper">
+        <img class="product-image"
+             src="https://product.hstatic.net/1000235488/product/1079_xanh_bien_6680ecb7b40b4bbda0a889fc8963cba8_large.png"
+             alt="">
+
+        <div class="hover-box">
+          <button class="btn-action">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+          <button class="btn-action">
+            <span class="material-symbols-outlined">visibility</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="brand-name">CÔNG TY TNHH ĐẦU TƯ VÀ THƯƠNG MẠI MINH GIA PHÚ</p>
+        <h3 class="product-name">Áo Nam Papka 1079 xanh biển</h3>
+        <div class="price">249,000đ</div>
+        <div class="price-sub">
+          <span class="old-price">449,000đ</span>
+          <span class="discount">-45%</span>
+        </div>
+      </div>
+    </div>
+    <div class="clothes">
+      <div class="image-wrapper">
+        <img class="product-image"
+             src="https://product.hstatic.net/1000235488/product/1079_be_7eb0884621924936925f52cc87c7f2f3_large.png"
+             alt="">
+
+        <div class="hover-box">
+          <button class="btn-action">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+          <button class="btn-action">
+            <span class="material-symbols-outlined">visibility</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="brand-name">CÔNG TY TNHH ĐẦU TƯ VÀ THƯƠNG MẠI MINH GIA PHÚ</p>
+        <h3 class="product-name">Áo Nam Papka 1079 be</h3>
+        <div class="price">249,000đ</div>
+        <div class="price-sub">
+          <span class="old-price">449,000đ</span>
+          <span class="discount">-45%</span>
+        </div>
+      </div>
+    </div>
+    <div class="clothes">
+      <div class="image-wrapper">
+        <img class="product-image"
+             src="https://product.hstatic.net/1000235488/product/1079_be_7eb0884621924936925f52cc87c7f2f3_large.png"
+             alt="">
+
+        <div class="hover-box">
+          <button class="btn-action">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+          <button class="btn-action">
+            <span class="material-symbols-outlined">visibility</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="brand-name">CÔNG TY TNHH ĐẦU TƯ VÀ THƯƠNG MẠI MINH GIA PHÚ</p>
+        <h3 class="product-name">Áo Nam Papka 1079 be</h3>
+        <div class="price">249,000đ</div>
+        <div class="price-sub">
+          <span class="old-price">449,000đ</span>
+          <span class="discount">-45%</span>
+        </div>
+      </div>
+    </div>
+    <div class="clothes">
+      <div class="image-wrapper">
+        <img class="product-image"
+             src="https://product.hstatic.net/1000235488/product/1079_be_7eb0884621924936925f52cc87c7f2f3_large.png"
+             alt="">
+
+        <div class="hover-box">
+          <button class="btn-action">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+          <button class="btn-action">
+            <span class="material-symbols-outlined">visibility</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="brand-name">CÔNG TY TNHH ĐẦU TƯ VÀ THƯƠNG MẠI MINH GIA PHÚ</p>
+        <h3 class="product-name">Áo Nam Papka 1079 be</h3>
+        <div class="price">249,000đ</div>
+        <div class="price-sub">
+          <span class="old-price">449,000đ</span>
+          <span class="discount">-45%</span>
+        </div>
+      </div>
+    </div>
+    <div class="page-change">
+      <a href="" class="page active">1</a>
+      <a href="" class="page">2</a>
+      <a href="" class="page">3</a>
+      <a href="" class="page">...</a>
+      <a href="" class="page">10</a>
+      <a href="" class="page next"><span class="material-symbols-outlined">arrow_forward_ios</span></a>
+    </div>
+
+
+
+
+  </div>
+
+</div>
+
