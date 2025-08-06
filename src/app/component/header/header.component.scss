@@ -165,16 +165,3 @@
 .span {
   color: #555;
 }
-
-.card {
-  width: 72%;
-  height: 22%;
-  margin: 1% 14%;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.card:hover,
-.card:active {
-  transform: scale(0.95);
-}

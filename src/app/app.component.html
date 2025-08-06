@@ -1,12 +1,1 @@
-<div class="container">
-  <app-header></app-header>
-
-  <app-main
-    [products]="products"
-    (addToCart)="addToCart($event)">
-  </app-main>
-
-  <button (click)="openCartDialog()">🛒 Xem giỏ hàng ({{ cart.length }})</button>
-
-  <app-footer></app-footer>
-</div>
+<router-outlet></router-outlet>

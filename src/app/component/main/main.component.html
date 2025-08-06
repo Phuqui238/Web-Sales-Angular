@@ -1,0 +1,165 @@
+<img class="card"
+     src="https://file.hstatic.net/1000235488/collection/papka_collection_nam_feedback_31d1420129924155baa5deeb2cab1c02.png"
+     alt="">
+<div class="filter-title-sort">
+  <h5 class="page-title">Nam</h5>
+  <div class="sort-box">
+    <label class="sort-label">Sắp xếp:</label>
+    <select class="sort-select">
+      <option value="">Từ A đến Z</option>
+      <option value="">Từ Z đến A</option>
+      <option value="">Giá tăng dần</option>
+      <option value="">Giá giảm dần</option>
+      <option value="">Hàng mới</option>
+    </select>
+  </div>
+</div>
+
+<div class="menu">
+  <div class="left-menu">
+    <div class="filter">
+      <div class="filter-group">
+        <p>THƯƠNG HIỆU</p>
+        <mat-checkbox>PAPKA Fashion</mat-checkbox>
+        <mat-checkbox>Minh Gia Phú</mat-checkbox> <br>
+        <mat-checkbox>Khác</mat-checkbox>
+      </div>
+      <div class="filter-group">
+        <p>MỨC GIÁ</p>
+        <mat-checkbox>Dưới 100,000₫</mat-checkbox>
+        <mat-checkbox>100,000₫ - 200,000₫</mat-checkbox>
+        <mat-checkbox>200,000₫ - 300,000₫</mat-checkbox>
+        <mat-checkbox>300,000₫ - 500,000₫</mat-checkbox>
+        <mat-checkbox>500,000₫ - 700,000₫</mat-checkbox>
+        <mat-checkbox>Trên 1,000,000₫</mat-checkbox>
+      </div>
+      <div class="filter-group">
+        <p>LOẠI</p>
+        <mat-checkbox>Áo Nam</mat-checkbox> <br>
+        <mat-checkbox>Áo Polo Nam</mat-checkbox> <br>
+        <mat-checkbox>Áo Thun Nam</mat-checkbox> <br>
+        <mat-checkbox>Quần Nam</mat-checkbox> <br>
+        <mat-checkbox>Quần Shorts</mat-checkbox> <br>
+        <mat-checkbox>SM_TD</mat-checkbox> <br>
+        <mat-checkbox>Áo Nữ</mat-checkbox>
+      </div>
+    </div>
+  </div>
+
+  <div class="right-menu">
+    <div class="product-container">
+      @for (product of products; track product.name) {
+        <mat-card class="example-card" appearance="outlined">
+          <img mat-card-image [src]="product.image" alt="{{ product.name }}" />
+          <mat-card-header>
+            <mat-card-title class="brand">{{ product.brand }}</mat-card-title>
+            <mat-card-title class="name">{{ product.name }}</mat-card-title>
+            <mat-card-subtitle>{{ product.price }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="price-discount">
+              <p class="old-price">{{ product.oldPrice }}</p>
+              <p class="discount">{{ product.discount }}</p>
+            </div>
+          </mat-card-content>
+          <mat-card-actions>
+            <div class="card-buttons">
+              <button mat-button (click)="onAdd(product)">MUA</button>
+              <button mat-button (click)="onAdd(product)">Thêm vào giỏ</button>
+            </div>
+          </mat-card-actions>
+        </mat-card>
+      }
+
+    </div>
+
+    <div class="product-container">
+      @for (product of products; track product.name) {
+        <mat-card class="example-card" appearance="outlined">
+          <img mat-card-image [src]="product.image" alt="{{ product.name }}" />
+          <mat-card-header>
+            <mat-card-title class="brand">{{ product.brand }}</mat-card-title>
+            <mat-card-title class="name">{{ product.name }}</mat-card-title>
+            <mat-card-subtitle>{{ product.price }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="price-discount">
+              <p class="old-price">{{ product.oldPrice }}</p>
+              <p class="discount">{{ product.discount }}</p>
+            </div>
+          </mat-card-content>
+          <mat-card-actions>
+            <div class="card-buttons">
+              <button mat-button (click)="onAdd(product)">MUA</button>
+              <button mat-button (click)="onAdd(product)">Thêm vào giỏ</button>
+            </div>
+          </mat-card-actions>
+        </mat-card>
+      }
+
+    </div>
+
+    <div class="product-container">
+      @for (product of products; track product.name) {
+        <mat-card class="example-card" appearance="outlined">
+          <img mat-card-image [src]="product.image" alt="{{ product.name }}" />
+          <mat-card-header>
+            <mat-card-title class="brand">{{ product.brand }}</mat-card-title>
+            <mat-card-title class="name">{{ product.name }}</mat-card-title>
+            <mat-card-subtitle>{{ product.price }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="price-discount">
+              <p class="old-price">{{ product.oldPrice }}</p>
+              <p class="discount">{{ product.discount }}</p>
+            </div>
+          </mat-card-content>
+          <mat-card-actions>
+            <div class="card-buttons">
+              <button mat-button (click)="onAdd(product)">MUA</button>
+              <button mat-button (click)="onAdd(product)">Thêm vào giỏ</button>
+            </div>
+          </mat-card-actions>
+        </mat-card>
+      }
+
+    </div>
+
+    <div class="product-container">
+      @for (product of products; track product.name) {
+        <mat-card class="example-card" appearance="outlined">
+          <img mat-card-image [src]="product.image" alt="{{ product.name }}" />
+          <mat-card-header>
+            <mat-card-title class="brand">{{ product.brand }}</mat-card-title>
+            <mat-card-title class="name">{{ product.name }}</mat-card-title>
+            <mat-card-subtitle>{{ product.price }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="price-discount">
+              <p class="old-price">{{ product.oldPrice }}</p>
+              <p class="discount">{{ product.discount }}</p>
+            </div>
+          </mat-card-content>
+          <mat-card-actions>
+            <div class="card-buttons">
+              <button mat-button (click)="onAdd(product)">MUA</button>
+              <button mat-button (click)="onAdd(product)">Thêm vào giỏ</button>
+            </div>
+          </mat-card-actions>
+        </mat-card>
+      }
+
+    </div>
+
+    <div class="page-change">
+      <a href="#" class="page active">1</a>
+      <a href="#" class="page">2</a>
+      <a href="#" class="page">3</a>
+      <a href="#" class="page">...</a>
+      <a href="#" class="page">10</a>
+      <a href="#" class="page next">
+        <span class="material-symbols-outlined">arrow_forward_ios</span>
+      </a>
+    </div>
+  </div>
+</div>

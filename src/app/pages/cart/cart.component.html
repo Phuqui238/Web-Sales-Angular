@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="cart-layout">
+<mat-card class="cart-card" appearance="outlined">
+  @for (item of cartItems; track item.id) {
+    <div class="cart-item">
+      <img class="product-image" [src]="item.image" alt="{{ item.name }}" />
+
+      <div class="product-info">
+        <h3>{{ item.name }}</h3>
+        <p>Thương hiệu: {{ item.brand }}</p>
+        <p>Giá: <span class="price">{{ item.price }}</span></p>
+
+        <div class="quantity-control">
+          <button mat-icon-button (click)="decreaseQuantity(item)">
+            <mat-icon>remove</mat-icon>
+          </button>
+          <span>{{ item.quantity }}</span>
+          <button mat-icon-button (click)="increaseQuantity(item)">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+
+        <p>Thành tiền: {{ getProductTotal(item) | currency:'VND':'symbol':'1.0-0' }}</p>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+  }
+</mat-card>
+
+<div class="total-container">
+  <h3>
+    Tổng tiền: {{ getTotal() | currency:'VND':'symbol':'1.0-0' }}
+  </h3>
+  <button mat-raised-button class="black-button">THANH TOÁN</button>
+</div>
+</div>
