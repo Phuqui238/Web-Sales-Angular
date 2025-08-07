@@ -1,1 +1,28 @@
-helloo
+<div class="wrapper">
+<div class="main">
+  <div class="image">
+    <img [src]="product.image" alt="{{ product.name }}" >
+  </div>
+
+  <div class="info">
+    <h2>{{ product.name }}</h2>
+    <p class="price">{{ product.brand }}</p>
+
+    <div class="daysrating">
+      <div class="stat-box">
+        <span class="label">Giá tiền</span> <br>
+        <span class="value">{{product.price}}</span>
+      </div>
+      <div class="stat-box">
+        <span class="label">{{product.oldPrice}}</span> <br>
+        <span class="value">{{product.discount}}</span>
+      </div>
+    </div>
+
+    <div class="card-buttons">
+      <button mat-button>MUA NGAY</button>
+      <button mat-button (click)="$event.stopPropagation();onAddToCart()">Thêm vào giỏ</button>
+    </div>
+  </div>
+</div>
+</div>

@@ -48,108 +48,11 @@
 
   <div class="right-menu">
     <div class="product-container">
-      @for (product of products; track product.name) {
-        <mat-card class="example-card" appearance="outlined">
-          <img mat-card-image [src]="product.image" alt="{{ product.name }}" />
-          <mat-card-header>
-            <mat-card-title class="brand">{{ product.brand }}</mat-card-title>
-            <mat-card-title class="name">{{ product.name }}</mat-card-title>
-            <mat-card-subtitle>{{ product.price }}</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            <div class="price-discount">
-              <p class="old-price">{{ product.oldPrice }}</p>
-              <p class="discount">{{ product.discount }}</p>
-            </div>
-          </mat-card-content>
-          <mat-card-actions>
-            <div class="card-buttons">
-              <button mat-button (click)="onAdd(product)">MUA</button>
-              <button mat-button (click)="onAdd(product)">Thêm vào giỏ</button>
-            </div>
-          </mat-card-actions>
-        </mat-card>
+      @for (product of products; track product.id) {
+        <app-card [product]="product" (addToCart)="onAdd($event)"></app-card>
       }
-
     </div>
 
-    <div class="product-container">
-      @for (product of products; track product.name) {
-        <mat-card class="example-card" appearance="outlined">
-          <img mat-card-image [src]="product.image" alt="{{ product.name }}" />
-          <mat-card-header>
-            <mat-card-title class="brand">{{ product.brand }}</mat-card-title>
-            <mat-card-title class="name">{{ product.name }}</mat-card-title>
-            <mat-card-subtitle>{{ product.price }}</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            <div class="price-discount">
-              <p class="old-price">{{ product.oldPrice }}</p>
-              <p class="discount">{{ product.discount }}</p>
-            </div>
-          </mat-card-content>
-          <mat-card-actions>
-            <div class="card-buttons">
-              <button mat-button (click)="onAdd(product)">MUA</button>
-              <button mat-button (click)="onAdd(product)">Thêm vào giỏ</button>
-            </div>
-          </mat-card-actions>
-        </mat-card>
-      }
-
-    </div>
-
-    <div class="product-container">
-      @for (product of products; track product.name) {
-        <mat-card class="example-card" appearance="outlined">
-          <img mat-card-image [src]="product.image" alt="{{ product.name }}" />
-          <mat-card-header>
-            <mat-card-title class="brand">{{ product.brand }}</mat-card-title>
-            <mat-card-title class="name">{{ product.name }}</mat-card-title>
-            <mat-card-subtitle>{{ product.price }}</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            <div class="price-discount">
-              <p class="old-price">{{ product.oldPrice }}</p>
-              <p class="discount">{{ product.discount }}</p>
-            </div>
-          </mat-card-content>
-          <mat-card-actions>
-            <div class="card-buttons">
-              <button mat-button (click)="onAdd(product)">MUA</button>
-              <button mat-button (click)="onAdd(product)">Thêm vào giỏ</button>
-            </div>
-          </mat-card-actions>
-        </mat-card>
-      }
-
-    </div>
-
-    <div class="product-container">
-      @for (product of products; track product.name) {
-        <mat-card class="example-card" appearance="outlined">
-          <img mat-card-image [src]="product.image" alt="{{ product.name }}" />
-          <mat-card-header>
-            <mat-card-title class="brand">{{ product.brand }}</mat-card-title>
-            <mat-card-title class="name">{{ product.name }}</mat-card-title>
-            <mat-card-subtitle>{{ product.price }}</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            <div class="price-discount">
-              <p class="old-price">{{ product.oldPrice }}</p>
-              <p class="discount">{{ product.discount }}</p>
-            </div>
-          </mat-card-content>
-          <mat-card-actions>
-            <div class="card-buttons">
-              <button mat-button (click)="onAdd(product)">MUA</button>
-              <button mat-button (click)="onAdd(product)">Thêm vào giỏ</button>
-            </div>
-          </mat-card-actions>
-        </mat-card>
-      }
-
-    </div>
 
     <div class="page-change">
       <a href="#" class="page active">1</a>

@@ -1,0 +1,22 @@
+
+    <mat-card class="example-card" appearance="outlined" (click)="goToDetail()">
+      <img mat-card-image [src]="product.image" alt="{{ product.name }}" />
+      <mat-card-header>
+        <mat-card-title class="brand">{{ product.brand }}</mat-card-title>
+        <mat-card-title class="name">{{ product.name }}</mat-card-title>
+        <mat-card-subtitle>{{ product.price }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="price-discount">
+          <p class="old-price">{{ product.oldPrice }}</p>
+          <p class="discount">{{ product.discount }}</p>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <div class="card-buttons">
+          <button mat-button>MUA</button>
+          <button mat-button (click)="$event.stopPropagation();onAddToCart()">Thêm vào giỏ</button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+
