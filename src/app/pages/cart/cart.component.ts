@@ -22,7 +22,6 @@ import {HeaderComponent} from '../../component/header/header.component';
     CurrencyPipe,
     MatDivider,
     MatButton,
-    HeaderComponent
   ]
 })
 export class CartComponent implements OnInit {
